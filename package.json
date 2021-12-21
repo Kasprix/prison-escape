@@ -1,0 +1,24 @@
+{
+  "name": "prison",
+  "version": "1.0.0",
+  "description": "prison escape",
+  "main": "index.js",
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kasprix/prison-escape.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kasprix/prison-escape/issues"
+  },
+  "homepage": "https://github.com/Kasprix/prison-escape#readme"
+}
