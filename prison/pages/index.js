@@ -201,9 +201,10 @@ export default function Home() {
                     </Grid>
 
 
-                    <Grid container maxWidth='80%' spacing={5}
+                    <Grid container maxWidth='100%' spacing={5}
                           style={{justifyContent: 'center', alignItems: 'center'}}>
-                        <Grid item className={styles.multipleCard} style={{backgroundColor: 'rgb(4, 17, 87, 0.7)', float: 'left'}} xs={12} sm={12} md={4}>
+                        <Grid item className={styles.multipleCard}
+                              style={{backgroundColor: 'rgb(4, 17, 87, 0.7)'}} xs={12} sm={12} md={3}>
                             <Typography variant='h5'> GUARD<br></br><br></br>
                                 Protectors of the prison. They only have one thought, Criminals must be imprisoned.
                                 Patience
@@ -211,7 +212,23 @@ export default function Home() {
 
                         </Grid>
 
-                        <Grid item className={styles.multipleCard} xs={12} sm={12} md={3}>
+                         <Grid item className={styles.multipleCard}
+
+                              xs={12} sm={12} md={3}>
+                            <Typography variant='h5'>$FREE<br></br><br></br>
+
+                                $FREE is the primary currency for The Prison Escape, and all will continue to be so for
+                                all of our future phases.
+
+                                Criminals generate $FREE, while guards steal, and charge taxes on that $FREE.
+
+                                $FREE can be used in further phases to mint valuable items, characters and so on, to
+                                give yourself an advantage over other players. Further $FREE utility will include
+                                collaborations, WL, giveaways, and so on.</Typography>
+
+                        </Grid>
+
+                        <Grid item className={styles.multipleCard} style={{backgroundColor: 'rgb(4, 17, 87, 0.7)'}} xs={12} sm={12} md={3}>
                             <Typography variant='h5'>CRIMINALS<br></br><br></br>
 
                                 A group of rough-housing bandits looking to fill their bags. Lurking in the shadows to
@@ -221,11 +238,7 @@ export default function Home() {
                                 Will they be $FREE?</Typography>
                         </Grid>
 
-                        <Grid item className={styles.multipleCard} style={{backgroundColor: 'rgb(4, 17, 87, 0.7)', float: 'right'}}
-                              xs={12} sm={12} md={4}>
-                            <Typography variant='h5'>$FREE<br></br><br></br></Typography>
 
-                        </Grid>
                     </Grid>
 
                     <Grid container maxWidth='80%' spacing={3}
