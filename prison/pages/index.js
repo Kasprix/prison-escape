@@ -202,10 +202,8 @@ export default function Home() {
 
 
                     <Grid container maxWidth='80%' spacing={5}
-                          style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-                        <Grid item className={styles.multipleCard} style={{backgroundColor: 'rgb(4, 17, 87, 0.7)'}}
-                              sx={{}}
-                              xs={12} sm={12} md={4}>
+                          style={{justifyContent: 'center', alignItems: 'center'}}>
+                        <Grid item className={styles.multipleCard} style={{backgroundColor: 'rgb(4, 17, 87, 0.7)', float: 'left'}} xs={12} sm={12} md={4}>
                             <Typography variant='h5'> GUARD<br></br><br></br>
                                 Protectors of the prison. They only have one thought, Criminals must be imprisoned.
                                 Patience
@@ -213,7 +211,7 @@ export default function Home() {
 
                         </Grid>
 
-                        <Grid item className={styles.multipleCard} sx={{}} xs={12} sm={12} md={3}>
+                        <Grid item className={styles.multipleCard} xs={12} sm={12} md={3}>
                             <Typography variant='h5'>CRIMINALS<br></br><br></br>
 
                                 A group of rough-housing bandits looking to fill their bags. Lurking in the shadows to
@@ -223,8 +221,7 @@ export default function Home() {
                                 Will they be $FREE?</Typography>
                         </Grid>
 
-                        <Grid item className={styles.multipleCard} style={{backgroundColor: 'rgb(4, 17, 87, 0.7)'}}
-                              sx={{}}
+                        <Grid item className={styles.multipleCard} style={{backgroundColor: 'rgb(4, 17, 87, 0.7)', float: 'right'}}
                               xs={12} sm={12} md={4}>
                             <Typography variant='h5'>$FREE<br></br><br></br></Typography>
 
