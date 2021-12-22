@@ -201,9 +201,8 @@ export default function Home() {
                     </Grid>
 
 
-                    <Grid container maxWidth='80%' spacing={3}
+                    <Grid container maxWidth='80%' spacing={5}
                           style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-
                         <Grid item className={styles.multipleCard} style={{backgroundColor: 'rgb(4, 17, 87, 0.7)'}}
                               sx={{}}
                               xs={12} sm={12} md={4}>

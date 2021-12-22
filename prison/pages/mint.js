@@ -214,7 +214,7 @@ export default function Home() {
 
 
                                 <Box sx={{width: '100%', marginBottom: 5}}>
-                                    <LinearProgress variant="determinate" id='progressBar' value='25'/>
+                                    <LinearProgress variant="determinate" id='progressBar' value='0'/>
                                 </Box>
 
                                 <Typography variant="h4"
