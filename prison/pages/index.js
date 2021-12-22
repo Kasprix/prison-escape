@@ -1,5 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
+
 import styles from '../styles/Home.module.css'
 
 import * as React from 'react';
@@ -63,73 +65,72 @@ export default function Home() {
                 </Head>
 
 
-                <AppBar position="fixed" sx={{backgroundColor: '#041157', marginBottom: 20}}>
-                    <Container maxWidth="xl">
-                        <Toolbar disableGutters>
-                            <Typography
-                                variant="h6"
-                                noWrap
-                                component="div"
-                                sx={{mr: 2, display: {xs: 'none', md: 'flex'}}}
+                            <AppBar position="fixed" sx={{backgroundColor: '#041157', marginBottom: 20}}>
+                <Container maxWidth="xl">
+                    <Toolbar disableGutters>
+                        <Typography
+                            variant="h6"
+                            noWrap
+                            component="div"
+                            sx={{mr: 2, display: {xs: 'none', md: 'flex'}}}
+                        >
+                        </Typography>
+
+                        <Box sx={{flexGrow: 1, display: {xs: 'flex', md: 'none'}}}>
+                            <IconButton
+                                size="large"
+                                aria-label="account of current user"
+                                aria-controls="menu-appbar"
+                                aria-haspopup="true"
+                                onClick={handleOpenNavMenu}
+                                color="inherit"
                             >
-                            </Typography>
-
-                            <Box sx={{flexGrow: 1, display: {xs: 'flex', md: 'none'}}}>
-                                <IconButton
-                                    size="large"
-                                    aria-label="account of current user"
-                                    aria-controls="menu-appbar"
-                                    aria-haspopup="true"
-                                    onClick={handleOpenNavMenu}
-                                    color="inherit"
-                                >
-                                    <MenuIcon/>
-                                </IconButton>
-                                <Menu
-                                    id="menu-appbar"
-                                    anchorEl={anchorElNav}
-                                    anchorOrigin={{
-                                        vertical: 'bottom',
-                                        horizontal: 'left',
-                                    }}
-                                    keepMounted
-                                    transformOrigin={{
-                                        vertical: 'top',
-                                        horizontal: 'left',
-                                    }}
-                                    open={Boolean(anchorElNav)}
-                                    onClose={handleCloseNavMenu}
-                                    sx={{
-                                        display: {xs: 'block', md: 'none'},
-                                    }}
-                                >
-                                    {pages.map((page) => (
-                                        <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                            <Typography textAlign="center">{page}</Typography>
-                                        </MenuItem>
-                                    ))}
-                                </Menu>
-                            </Box>
-                            <IconButton sx={{p: 0}}>
-                                <a href='/'><Avatar src="images/assets/policemanShocked.png" style={{marginRight: 20}}/></a>
+                                <MenuIcon/>
                             </IconButton>
-                            <Box sx={{flexGrow: 1, display: {xs: 'none', md: 'flex'}}}>
-
-
+                            <Menu
+                                id="menu-appbar"
+                                anchorEl={anchorElNav}
+                                anchorOrigin={{
+                                    vertical: 'bottom',
+                                    horizontal: 'left',
+                                }}
+                                keepMounted
+                                transformOrigin={{
+                                    vertical: 'top',
+                                    horizontal: 'left',
+                                }}
+                                open={Boolean(anchorElNav)}
+                                onClose={handleCloseNavMenu}
+                                sx={{
+                                    display: {xs: 'block', md: 'none'},
+                                }}
+                            >
                                 {pages.map((page) => (
-                                    <Button
-                                        key={page}
-                                        onClick={handleCloseNavMenu}
-                                        sx={{my: 2, color: 'white', display: 'block'}}
-                                    >
-                                        <Typography textAlign="center"><a
-                                            href={`/${page.toLowerCase()}`}>{page}</a></Typography>
-                                    </Button>
+                                    <MenuItem key={page} onClick={handleCloseNavMenu}>
+                                        <Typography textAlign="center" >{page}</Typography>
+                                    </MenuItem>
                                 ))}
-                            </Box>
-                        </Toolbar>
-                    </Container>
-                </AppBar>
+                            </Menu>
+                        </Box>
+                        <IconButton sx={{p: 0}}>
+                                 <Link href="/"><Avatar src="images/assets/policemanShocked.png" style={{marginRight: 20}}/></Link>
+                            </IconButton>
+                        <Box sx={{flexGrow: 1, display: {xs: 'none', md: 'flex'}}}>
+
+
+                            {pages.map((page) => (
+                                <Button
+                                    key={page}
+                                    onClick={handleCloseNavMenu}
+                                    sx={{my: 2, color: 'white', display: 'block'}}
+                                >
+                                    <Typography textAlign="center" ><a href={`/${page.toLowerCase()}`}>{page}</a></Typography>
+                                </Button>
+                            ))}
+                        </Box>
+                    </Toolbar>
+                </Container>
+            </AppBar>
 
 
                 <main className={styles.main}>

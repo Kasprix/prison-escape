@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
@@ -111,7 +112,7 @@ export default function Home() {
                             </Menu>
                         </Box>
                         <IconButton sx={{p: 0}}>
-                                <a href='/'><Avatar src="images/assets/policemanShocked.png" style={{marginRight: 20}}/></a>
+                                 <Link href="/"><Avatar src="images/assets/policemanShocked.png" style={{marginRight: 20}}/></Link>
                             </IconButton>
                         <Box sx={{flexGrow: 1, display: {xs: 'none', md: 'flex'}}}>
 

@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 
 import * as React from 'react';
@@ -115,7 +116,8 @@ export default function Home() {
                                 </Menu>
                             </Box>
                             <IconButton sx={{p: 0}}>
-                                <a href='/'><Avatar src="images/assets/policemanShocked.png" style={{marginRight: 20}}/></a>
+                                <Link href="/"><Avatar src="images/assets/policemanShocked.png"
+                                                       style={{marginRight: 20}}/></Link>
                             </IconButton>
                             <Box sx={{flexGrow: 1, display: {xs: 'none', md: 'flex'}}}>
 
@@ -317,21 +319,21 @@ export default function Home() {
                                     style={{wordWrap: 'break-word'}} variant='p'
                                 > Staked guards are in training. When staked and in training, guards cannot steal $FREE
                                     nor partake in the 20% tax.
-                                    <br></br><br></br>
+                                    <br/><br/>
                                     All guards start at level 0, and can reach a level 3 through 7 total days of
                                     training.
-                                    <br></br><br></br>
-                                    - Level 0 guards steal 20% of a criminal's $FREE.
-                                    <br></br><br></br>
-                                    - Level 1 guards steal 40% of a criminal's $FREE, and require 1 day of staking to
+                                    <br/><br/>
+                                    - Level 0 guards steal 20% of a criminals $FREE.
+                                    <br/><br/>
+                                    - Level 1 guards steal 40% of a criminals $FREE, and require 1 day of staking to
                                     reach.
-                                    <br></br><br></br>
-                                    - Level 2 guards steal 60% of a criminal’s $FREE, and require 3 total days of
+                                    <br/><br/>
+                                    - Level 2 guards steal 60% of a criminals $FREE, and require 3 total days of
                                     staking to reach.
-                                    <br></br><br></br>
-                                    - Level 3 guards steal 75% of a criminal's $FREE, and require 7 total days of
+                                    <br/><br/>
+                                    - Level 3 guards steal 75% of a criminals $FREE, and require 7 total days of
                                     staking to reach.
-                                    <br></br><br></br>
+                                    <br/><br/>
                                     ** All guards can choose to time lock their guard into 7 days of staking, or choose
                                     to have their guard unstake at every level, but then need to pay the gas fees to
                                     restake. Time Locked guards can be unstaked by burning $FREE as well as any guard in

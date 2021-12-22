@@ -4,25 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd21acf9-8b6f-4e5e-9d14-de240ac72243" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prison/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/prison/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prison/pages/staking.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prison/shelly/my-app/.eslintrc.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prison/shelly/my-app/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prison/shelly/my-app/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prison/shelly/my-app/next.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prison/shelly/my-app/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prison/shelly/my-app/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prison/shelly/my-app/pages/_app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prison/shelly/my-app/pages/api/hello.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prison/shelly/my-app/pages/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prison/shelly/my-app/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prison/shelly/my-app/public/vercel.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prison/shelly/my-app/styles/Home.module.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prison/shelly/my-app/styles/globals.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/prison/styles/Home.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/prison/styles/Home.module.css" afterDir="false" />
-    </list>
+    <list default="true" id="dd21acf9-8b6f-4e5e-9d14-de240ac72243" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -109,7 +91,7 @@
       <workItem from="1640126286528" duration="270000" />
       <workItem from="1640126582742" duration="65000" />
       <workItem from="1640126689391" duration="25873000" />
-      <workItem from="1640209224061" duration="627000" />
+      <workItem from="1640209224061" duration="1132000" />
     </task>
     <servers />
   </component>
