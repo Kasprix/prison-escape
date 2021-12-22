@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dd21acf9-8b6f-4e5e-9d14-de240ac72243" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/prison/pages/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/prison/pages/home.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/prison/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/prison/pages/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/prison/pages/mint.js" beforeDir="false" afterPath="$PROJECT_DIR$/prison/pages/mint.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/prison/pages/whitepaper.js" beforeDir="false" afterPath="$PROJECT_DIR$/prison/pages/whitepaper.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prison/styles/Home.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/prison/styles/Home.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +103,8 @@
       <workItem from="1640126582742" duration="65000" />
       <workItem from="1640126689391" duration="25873000" />
       <workItem from="1640209224061" duration="1132000" />
-      <workItem from="1640210412504" duration="4173000" />
+      <workItem from="1640210412504" duration="4401000" />
+      <workItem from="1640215003468" duration="1846000" />
     </task>
     <servers />
   </component>
@@ -118,16 +121,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>8</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

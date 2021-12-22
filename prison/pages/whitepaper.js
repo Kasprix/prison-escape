@@ -68,7 +68,7 @@ export default function Home() {
                 </Head>
 
 
-                <AppBar position="fixed" sx={{backgroundColor: '#041157', marginBottom: 20}}>
+                           <AppBar position="fixed" sx={{backgroundColor: '#041157', marginBottom: 20}}>
                     <Container maxWidth="xl">
                         <Toolbar disableGutters>
                             <Typography
@@ -110,7 +110,7 @@ export default function Home() {
                                 >
                                     {pages.map((page) => (
                                         <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                            <Typography textAlign="center">{page}</Typography>
+                                            <Typography textAlign="center"> href={`/${page.toLowerCase()}`}{page}</Typography>
                                         </MenuItem>
                                     ))}
                                 </Menu>
@@ -380,13 +380,13 @@ export default function Home() {
 
                 </main>
 
-                <footer className={styles.footer}>
+               <footer className={styles.footer}>
                     <a
                         href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        Powered by the Man
+                        Powered by the Warden
 
                     </a>
                 </footer>

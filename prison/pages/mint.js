@@ -69,73 +69,75 @@ export default function Home() {
                 </Head>
 
 
-                          <AppBar position="fixed" sx={{backgroundColor: '#041157', marginBottom: 20}}>
-                <Container maxWidth="xl">
-                    <Toolbar disableGutters>
-                        <Typography
-                            variant="h6"
-                            noWrap
-                            component="div"
-                            sx={{mr: 2, display: {xs: 'none', md: 'flex'}}}
-                        >
-                        </Typography>
-
-                        <Box sx={{flexGrow: 1, display: {xs: 'flex', md: 'none'}}}>
-                            <IconButton
-                                size="large"
-                                aria-label="account of current user"
-                                aria-controls="menu-appbar"
-                                aria-haspopup="true"
-                                onClick={handleOpenNavMenu}
-                                color="inherit"
+                <AppBar position="fixed" sx={{backgroundColor: '#041157', marginBottom: 20}}>
+                    <Container maxWidth="xl">
+                        <Toolbar disableGutters>
+                            <Typography
+                                variant="h6"
+                                noWrap
+                                component="div"
+                                sx={{mr: 2, display: {xs: 'none', md: 'flex'}}}
                             >
-                                <MenuIcon/>
-                            </IconButton>
-                            <Menu
-                                id="menu-appbar"
-                                anchorEl={anchorElNav}
-                                anchorOrigin={{
-                                    vertical: 'bottom',
-                                    horizontal: 'left',
-                                }}
-                                keepMounted
-                                transformOrigin={{
-                                    vertical: 'top',
-                                    horizontal: 'left',
-                                }}
-                                open={Boolean(anchorElNav)}
-                                onClose={handleCloseNavMenu}
-                                sx={{
-                                    display: {xs: 'block', md: 'none'},
-                                }}
-                            >
-                                {pages.map((page) => (
-                                    <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                        <Typography textAlign="center" >{page}</Typography>
-                                    </MenuItem>
-                                ))}
-                            </Menu>
-                        </Box>
-                        <IconButton sx={{p: 0}}>
-                                 <Link href="/"><Avatar src="images/assets/policemanShocked.png" style={{marginRight: 20}}/></Link>
-                            </IconButton>
-                        <Box sx={{flexGrow: 1, display: {xs: 'none', md: 'flex'}}}>
+                            </Typography>
 
-
-                            {pages.map((page) => (
-                                <Button
-                                    key={page}
-                                    onClick={handleCloseNavMenu}
-                                    sx={{my: 2, color: 'white', display: 'block'}}
+                            <Box sx={{flexGrow: 1, display: {xs: 'flex', md: 'none'}}}>
+                                <IconButton
+                                    size="large"
+                                    aria-label="account of current user"
+                                    aria-controls="menu-appbar"
+                                    aria-haspopup="true"
+                                    onClick={handleOpenNavMenu}
+                                    color="inherit"
                                 >
-                                    <Typography textAlign="center" ><a href={`/${page.toLowerCase()}`}>{page}</a></Typography>
-                                </Button>
-                            ))}
-                        </Box>
-                    </Toolbar>
-                </Container>
-            </AppBar>
+                                    <MenuIcon/>
+                                </IconButton>
+                                <Menu
+                                    id="menu-appbar"
+                                    anchorEl={anchorElNav}
+                                    anchorOrigin={{
+                                        vertical: 'bottom',
+                                        horizontal: 'left',
+                                    }}
+                                    keepMounted
+                                    transformOrigin={{
+                                        vertical: 'top',
+                                        horizontal: 'left',
+                                    }}
+                                    open={Boolean(anchorElNav)}
+                                    onClose={handleCloseNavMenu}
+                                    sx={{
+                                        display: {xs: 'block', md: 'none'},
+                                    }}
+                                >
+                                    {pages.map((page) => (
+                                        <MenuItem key={page} onClick={handleCloseNavMenu}>
+                                            <Typography
+                                                textAlign="center"> href={`/${page.toLowerCase()}`}{page}</Typography>
+                                        </MenuItem>
+                                    ))}
+                                </Menu>
+                            </Box>
+                            <IconButton sx={{p: 0}}>
+                                <Link href="/"><Avatar src="images/assets/policemanShocked.png"
+                                                       style={{marginRight: 20}}/></Link>
+                            </IconButton>
+                            <Box sx={{flexGrow: 1, display: {xs: 'none', md: 'flex'}}}>
 
+
+                                {pages.map((page) => (
+                                    <Button
+                                        key={page}
+                                        onClick={handleCloseNavMenu}
+                                        sx={{my: 2, color: 'white', display: 'block'}}
+                                    >
+                                        <Typography textAlign="center"><a
+                                            href={`/${page.toLowerCase()}`}>{page}</a></Typography>
+                                    </Button>
+                                ))}
+                            </Box>
+                        </Toolbar>
+                    </Container>
+                </AppBar>
 
                 <main className={styles.main}>
 
@@ -190,7 +192,7 @@ export default function Home() {
                                 <div style={{marginBottom: 90}}></div>
                                 <br></br>
 
-                                <Button variant="contained" style={{
+                                <Button variant="contained" href='/mint' style={{
                                     marginTop: 30,
                                     width: '35%',
                                     backgroundColor: '#041157'
@@ -283,7 +285,7 @@ export default function Home() {
                                     ALL </Typography>
                                 <div style={{marginBottom: 300}}></div>
 
-                                <Button variant="contained" style={{
+                                <Button variant="contained" href='/mint' style={{
                                     marginTop: 30,
                                     width: '35%',
                                     backgroundColor: '#041157'
@@ -313,12 +315,12 @@ export default function Home() {
                                     ALL </Typography>
                                 <div style={{marginBottom: 300}}></div>
 
-                                <Button variant="contained" style={{
+                                <Button variant="contained" href='/mint' style={{
                                     marginTop: 30,
                                     marginRight: 30,
                                     width: '35%',
                                     backgroundColor: '#041157'
-                                }}><Typography variant='h5' id='mint'>CLAIM</Typography></Button>
+                                }}><Typography variant='h5' href='/mint' id='mint'>CLAIM</Typography></Button>
                                 <Button variant="contained" style={{
                                     marginTop: 30,
                                     width: '35%',
@@ -331,13 +333,13 @@ export default function Home() {
 
                 </main>
 
-                <footer className={styles.footer}>
+               <footer className={styles.footer}>
                     <a
                         href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        Powered by the Man
+                        Powered by the Warden
 
                     </a>
                 </footer>

@@ -107,7 +107,8 @@ export default function Home() {
                                 >
                                     {pages.map((page) => (
                                         <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                            <Typography textAlign="center">{page}</Typography>
+                                            <Typography
+                                                textAlign="center"> href={`/${page.toLowerCase()}`}{page}</Typography>
                                         </MenuItem>
                                     ))}
                                 </Menu>
@@ -144,7 +145,7 @@ export default function Home() {
 
                     <Grid container maxWidth='80%' spacing={3}>
                         <Grid item className={styles.multipleCard} xs={12} sm={12} md={12} lg={12}
-                              style={{marginBottom: 100, alignItems: 'center'}}>
+                              style={{marginBottom: 100, justifyContent: 'center', alignItems: 'center'}}>
 
                             <Grid item xs={12} sm={12} md={12} lg={12} style={{marginBottom: 100}}>
 
@@ -187,67 +188,78 @@ export default function Home() {
 
                                 <Button variant="contained" href='/whitepaper' style={{
                                     marginTop: 30,
-                                    width: '35%',
+                                    width: '50%',
                                     backgroundColor: '#041157'
-                                }}><Typography variant='h5'>WHITEPAPER</Typography></Button>
+                                }}><Typography variant='h6'>WHITEPAPER</Typography></Button>
                                 <br></br><br></br>
                                 <Button variant="contained" href='/mint' style={{
                                     marginTop: 30,
-                                    width: '35%',
+                                    width: '50%',
                                     backgroundColor: '#041157'
-                                }}><Typography variant='h5'>MINT</Typography></Button>
+                                }}><Typography variant='h6'>MINT</Typography></Button>
                             </Grid>
                         </Grid>
                     </Grid>
 
+                    <Grid container maxWidth='80%' spacing={3}
+                          style={{justifyContent: 'center', alignItems: 'stretch', marginTop: 10}}>
 
-                    <Grid container maxWidth='100%' spacing={4}
-                          style={{justifyContent: 'center', alignItems: 'center'}}>
 
+                        <Grid item xs={12} sm={12} md={3}>
+                            <div className={styles.multipleCard}
+                                 style={{backgroundColor: 'rgb(4, 17, 87, 0.7)'}}>
+                                <Typography variant='h5'> GUARD<br></br><br></br></Typography>
 
-                        <Grid item className={styles.multipleCard}
-                              style={{backgroundColor: 'rgb(4, 17, 87, 0.7)'}} xs={12} sm={12} md={3}>
-                            <Typography variant='h5'> GUARD<br></br><br></br>
-                                Protectors of the prison. They only have one thought, Criminals must be imprisoned.
-                                Patience
-                                to level up will yield you more $FREE or does duty call, we’ll see.</Typography>
-
-                        </Grid>
-
-                         <Grid item className={styles.multipleCard}
-
-                              xs={12} sm={12} md={3}>
-                            <Typography variant='h5'>$FREE<br></br><br></br>
-
-                                $FREE is the primary currency for The Prison Escape, and all will continue to be so for
-                                all of our future phases.
-
-                                Criminals generate $FREE, while guards steal, and charge taxes on that $FREE.
-
-                                $FREE can be used in further phases to mint valuable items, characters and so on, to
-                                give yourself an advantage over other players. Further $FREE utility will include
-                                collaborations, WL, giveaways, and so on.</Typography>
+                                <Typography variant='h6'>Protectors of the prison. They only have one thought, Criminals
+                                    must be imprisoned.
+                                    Patience
+                                    to level up will yield you more $FREE or does duty call, we’ll see.</Typography>
+                            </div>
 
                         </Grid>
 
-                        <Grid item className={styles.multipleCard} style={{backgroundColor: 'rgb(4, 17, 87, 0.7)'}} xs={12} sm={12} md={3}>
-                            <Typography variant='h5'>CRIMINALS<br></br><br></br>
+                        <Grid item
 
-                                A group of rough-housing bandits looking to fill their bags. Lurking in the shadows to
-                                avoid
-                                Getting caught, these individuals are hard to spot. Will the guards be able to catch
-                                them or
-                                Will they be $FREE?</Typography>
+                              xs={12} sm={12} md={6}>
+                            <div className={styles.multipleCard}>
+                                <Typography variant='h5'>$FREE<br></br><br></br></Typography>
+
+                                <Typography variant='h6'>
+                                    $FREE is the primary currency for The Prison Escape, and all will continue to be so
+                                    for
+                                    all of our future phases.
+                                    <br/><br/>
+                                    Criminals generate $FREE, while guards steal, and charge taxes on that $FREE.
+                                    <br/><br/>
+                                    $FREE can be used in further phases to mint valuable items, characters and so on, to
+                                    give yourself an advantage over other players. Further $FREE utility will include
+                                    collaborations, WL, giveaways, and so on.</Typography></div>
+
+                        </Grid>
+
+                        <Grid item xs={12} sm={12} md={3}>
+                            <div className={styles.multipleCard}
+                                 style={{backgroundColor: 'rgb(4, 17, 87, 0.7)'}}>
+                                <Typography variant='h5'>CRIMINALS<br></br><br></br></Typography>
+
+                                <Typography variant='h6'>
+                                    A group of rough-housing bandits looking to fill their bags. Lurking in the shadows
+                                    to
+                                    avoid
+                                    Getting caught, these individuals are hard to spot. Will the guards be able to catch
+                                    them or
+                                    Will they be $FREE?</Typography></div>
                         </Grid>
 
 
                     </Grid>
+
 
                     <Grid container maxWidth='80%' spacing={3}
                           style={{flex: 1, justifyContent: 'center', alignItems: 'center', marginTop: 10}}>
 
 
-                        <Grid item className={styles.multipleCard} sx={{}} xs={12} sm={12} md={3}>
+                        <Grid item className={styles.multipleCard} sx={{}} xs={12} sm={12} md={4}>
                             <Grid container maxWidth='100%' spacing={2}
                                   style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
                                 <Grid item
@@ -283,7 +295,7 @@ export default function Home() {
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        Powered by the Man
+                        Powered by the Warden
 
                     </a>
                 </footer>
