@@ -185,13 +185,13 @@ export default function Home() {
                                 of The Warden, which was echoing through the vents from his office far
                                 away.<br></br><br></br>
 
-                                <Button variant="contained" style={{
+                                <Button variant="contained" href='/whitepaper' style={{
                                     marginTop: 30,
                                     width: '35%',
                                     backgroundColor: '#041157'
                                 }}><Typography variant='h5'>WHITEPAPER</Typography></Button>
                                 <br></br><br></br>
-                                <Button variant="contained" style={{
+                                <Button variant="contained" href='/mint' style={{
                                     marginTop: 30,
                                     width: '35%',
                                     backgroundColor: '#041157'
@@ -201,8 +201,10 @@ export default function Home() {
                     </Grid>
 
 
-                    <Grid container maxWidth='100%' spacing={5}
+                    <Grid container maxWidth='100%' spacing={4}
                           style={{justifyContent: 'center', alignItems: 'center'}}>
+
+
                         <Grid item className={styles.multipleCard}
                               style={{backgroundColor: 'rgb(4, 17, 87, 0.7)'}} xs={12} sm={12} md={3}>
                             <Typography variant='h5'> GUARD<br></br><br></br>
