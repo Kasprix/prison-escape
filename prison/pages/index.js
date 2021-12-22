@@ -65,72 +65,74 @@ export default function Home() {
                 </Head>
 
 
-                            <AppBar position="fixed" sx={{backgroundColor: '#041157', marginBottom: 20}}>
-                <Container maxWidth="xl">
-                    <Toolbar disableGutters>
-                        <Typography
-                            variant="h6"
-                            noWrap
-                            component="div"
-                            sx={{mr: 2, display: {xs: 'none', md: 'flex'}}}
-                        >
-                        </Typography>
-
-                        <Box sx={{flexGrow: 1, display: {xs: 'flex', md: 'none'}}}>
-                            <IconButton
-                                size="large"
-                                aria-label="account of current user"
-                                aria-controls="menu-appbar"
-                                aria-haspopup="true"
-                                onClick={handleOpenNavMenu}
-                                color="inherit"
+                <AppBar position="fixed" sx={{backgroundColor: '#041157', marginBottom: 20}}>
+                    <Container maxWidth="xl">
+                        <Toolbar disableGutters>
+                            <Typography
+                                variant="h6"
+                                noWrap
+                                component="div"
+                                sx={{mr: 2, display: {xs: 'none', md: 'flex'}}}
                             >
-                                <MenuIcon/>
-                            </IconButton>
-                            <Menu
-                                id="menu-appbar"
-                                anchorEl={anchorElNav}
-                                anchorOrigin={{
-                                    vertical: 'bottom',
-                                    horizontal: 'left',
-                                }}
-                                keepMounted
-                                transformOrigin={{
-                                    vertical: 'top',
-                                    horizontal: 'left',
-                                }}
-                                open={Boolean(anchorElNav)}
-                                onClose={handleCloseNavMenu}
-                                sx={{
-                                    display: {xs: 'block', md: 'none'},
-                                }}
-                            >
-                                {pages.map((page) => (
-                                    <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                        <Typography textAlign="center" >{page}</Typography>
-                                    </MenuItem>
-                                ))}
-                            </Menu>
-                        </Box>
-                        <IconButton sx={{p: 0}}>
-                                 <Link href="/"><Avatar src="images/assets/policemanShocked.png" style={{marginRight: 20}}/></Link>
-                            </IconButton>
-                        <Box sx={{flexGrow: 1, display: {xs: 'none', md: 'flex'}}}>
+                            </Typography>
 
-
-                            {pages.map((page) => (
-                                <Button
-                                    key={page}
-                                    onClick={handleCloseNavMenu}
-                                    sx={{my: 2, color: 'white', display: 'block'}}
+                            <Box sx={{flexGrow: 1, display: {xs: 'flex', md: 'none'}}}>
+                                <IconButton
+                                    size="large"
+                                    aria-label="account of current user"
+                                    aria-controls="menu-appbar"
+                                    aria-haspopup="true"
+                                    onClick={handleOpenNavMenu}
+                                    color="inherit"
                                 >
-                                    <Typography textAlign="center" ><a href={`/${page.toLowerCase()}`}>{page}</a></Typography>
-                                </Button>
-                            ))}
-                        </Box>
-                    </Toolbar>
-                </Container>
-            </AppBar>
+                                    <MenuIcon/>
+                                </IconButton>
+                                <Menu
+                                    id="menu-appbar"
+                                    anchorEl={anchorElNav}
+                                    anchorOrigin={{
+                                        vertical: 'bottom',
+                                        horizontal: 'left',
+                                    }}
+                                    keepMounted
+                                    transformOrigin={{
+                                        vertical: 'top',
+                                        horizontal: 'left',
+                                    }}
+                                    open={Boolean(anchorElNav)}
+                                    onClose={handleCloseNavMenu}
+                                    sx={{
+                                        display: {xs: 'block', md: 'none'},
+                                    }}
+                                >
+                                    {pages.map((page) => (
+                                        <MenuItem key={page} onClick={handleCloseNavMenu}>
+                                            <Typography textAlign="center">{page}</Typography>
+                                        </MenuItem>
+                                    ))}
+                                </Menu>
+                            </Box>
+                            <IconButton sx={{p: 0}}>
+                                <Link href="/"><Avatar src="images/assets/policemanShocked.png"
+                                                       style={{marginRight: 20}}/></Link>
+                            </IconButton>
+                            <Box sx={{flexGrow: 1, display: {xs: 'none', md: 'flex'}}}>
+
+
+                                {pages.map((page) => (
+                                    <Button
+                                        key={page}
+                                        onClick={handleCloseNavMenu}
+                                        sx={{my: 2, color: 'white', display: 'block'}}
+                                    >
+                                        <Typography textAlign="center"><a
+                                            href={`/${page.toLowerCase()}`}>{page}</a></Typography>
+                                    </Button>
+                                ))}
+                            </Box>
+                        </Toolbar>
+                    </Container>
+                </AppBar>
 
 
                 <main className={styles.main}>
@@ -205,26 +207,27 @@ export default function Home() {
                         <Grid item className={styles.multipleCard} style={{backgroundColor: 'rgb(4, 17, 87, 0.7)'}}
                               sx={{}}
                               xs={12} sm={12} md={4}>
-                            GUARD<br></br><br></br>
-
-                            Protectors of the prison. They only have one thought, "Criminals must be imprisoned".
-                            Patience
-                            to level up will yield you more $FREE or does duty call, we’ll see.
+                            <Typography variant='h5'> GUARD<br></br><br></br>
+                                Protectors of the prison. They only have one thought, Criminals must be imprisoned.
+                                Patience
+                                to level up will yield you more $FREE or does duty call, we’ll see.</Typography>
 
                         </Grid>
 
                         <Grid item className={styles.multipleCard} sx={{}} xs={12} sm={12} md={3}>
-                            CRIMINALS<br></br><br></br>
+                            <Typography variant='h5'>CRIMINALS<br></br><br></br>
 
-                            A group of rough-housing bandits looking to fill their bags. Lurking in the shadows to avoid
-                            Getting caught, these individuals are hard to spot. Will the guards be able to catch them or
-                            Will they be $FREE?
+                                A group of rough-housing bandits looking to fill their bags. Lurking in the shadows to
+                                avoid
+                                Getting caught, these individuals are hard to spot. Will the guards be able to catch
+                                them or
+                                Will they be $FREE?</Typography>
                         </Grid>
 
                         <Grid item className={styles.multipleCard} style={{backgroundColor: 'rgb(4, 17, 87, 0.7)'}}
                               sx={{}}
                               xs={12} sm={12} md={4}>
-                            $FREE<br></br><br></br>
+                            <Typography variant='h5'>$FREE<br></br><br></br></Typography>
 
                         </Grid>
                     </Grid>
@@ -238,17 +241,20 @@ export default function Home() {
                                   style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
                                 <Grid item
                                       xs={4} sm={4} md={4}>
-                                    <a href='https://vercel.com' target="_blank"><img src="images/assets/etherscan.png" style={{width: '50%'}} /></a>
+                                    <a href='https://vercel.com' target="_blank" rel="noreferrer"><img
+                                        src="images/assets/etherscan.png" style={{width: '50%'}}/></a>
                                 </Grid>
 
                                 <Grid item
                                       xs={4} sm={4} md={4}>
-                                    <a href='https://vercel.com' target="_blank"><img src="images/assets/opensea.png" style={{width: '50%'}} /></a>
+                                    <a href='https://vercel.com' target="_blank" rel="noreferrer"><img
+                                        src="images/assets/opensea.png" style={{width: '50%'}}/></a>
                                 </Grid>
 
                                 <Grid item
                                       xs={4} sm={4} md={4}>
-                                    <a href='https://vercel.com' target="_blank"><img src="images/assets/twitter.png" style={{width: '50%'}} /></a>
+                                    <a href='https://vercel.com' target="_blank" rel="noreferrer"><img
+                                        src="images/assets/twitter.png" style={{width: '50%'}}/></a>
                                 </Grid>
 
                             </Grid>
@@ -273,5 +279,5 @@ export default function Home() {
             </div>
 
         </ThemeProvider>
-)
+    )
 }

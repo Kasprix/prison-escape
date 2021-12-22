@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd21acf9-8b6f-4e5e-9d14-de240ac72243" name="Changes" comment="" />
+    <list default="true" id="dd21acf9-8b6f-4e5e-9d14-de240ac72243" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/prison/pages/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/prison/pages/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prison/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/prison/pages/index.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,6 +29,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectId" id="22bbGGvw03VcTnmEyhnf0kSs6zA" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -43,6 +49,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
@@ -92,6 +99,7 @@
       <workItem from="1640126582742" duration="65000" />
       <workItem from="1640126689391" duration="25873000" />
       <workItem from="1640209224061" duration="1132000" />
+      <workItem from="1640210412504" duration="1110000" />
     </task>
     <servers />
   </component>
@@ -108,5 +116,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>8</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
