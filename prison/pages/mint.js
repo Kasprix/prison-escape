@@ -19,6 +19,7 @@ import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import Divider from '@mui/material/Divider';
 import LinearProgress from '@mui/material/LinearProgress';
+import TextField from '@mui/material/TextField';
 
 
 import {createTheme, styled, ThemeProvider} from '@mui/material/styles';
@@ -33,7 +34,7 @@ const theme = createTheme({
 });
 
 
-const pages = ['WHITEPAPER', 'MINT', 'STAKING'];
+const pages = ['HOME', 'WHITEPAPER', 'MINT'];
 
 
 export default function Home() {
@@ -114,9 +115,9 @@ export default function Home() {
                                 </Menu>
                             </Box>
                             <IconButton sx={{p: 0}}>
-                                <Avatar src="images/assets/policemanShocked.png"/>
+                                <a href='/'><Avatar src="images/assets/policemanShocked.png" style={{marginRight: 20}}/></a>
                             </IconButton>
-                            <Box sx={{flexGrow: 1, display: {xs: 'none', md: 'flex'}}}>
+                            <Box sx={{flexGrow: 1, display: {xs: 'none', md: 'flex'}}} >
 
 
                                 {pages.map((page) => (
@@ -142,14 +143,14 @@ export default function Home() {
                         PRISON ESCAPE GAME
                     </h2>
 
-                    <Grid container maxWidth='90%' spacing={3}>
+                    <Grid container maxWidth='90%' spacing={5}>
 
 
-                        <Grid item className={styles.stakeCards} xs={12} sm={12} md={12} lg={6}
+                        <Grid item xs={12} sm={12} md={12} lg={6}
                               style={{marginBottom: 100, alignItems: 'center'}}>
+                            <div style={{margin: 40}}
+                                 className={styles.stakeCards}>
 
-
-                            <Grid item xs={12} sm={12} md={12} lg={12} style={{marginBottom: 100}}>
 
                                 <Typography variant="h3" sx={{marginBottom: 5}}>MINT</Typography>
 
@@ -158,18 +159,33 @@ export default function Home() {
 
                                 <Divider variant="middle" style={{marginBottom: 40}}/>
 
-                                <Typography variant="p" style={{float: 'left'}}>BALANCE </Typography>
+                                <Typography variant="p" style={{float: 'left'}}>BALANCE: </Typography>
                                 <Typography variant="p" style={{float: 'right'}} id='balance'> - </Typography>
                                 <div style={{marginBottom: 90}}></div>
 
-                                <Typography variant="p" style={{float: 'left'}}>AMOUNT TO BUY </Typography>
-                                <Typography variant="p" style={{float: 'right'}} id='input box'> - </Typography>
+                                <Typography variant="p" style={{float: 'left'}}>AMOUNT TO BUY: (MAX 10 PER
+                                    TX)</Typography>
+                                <TextField
+                                    sx={{input: {color: 'white', backgroundColor: '#fe7200'}}}
+                                    style={{
+                                        float: 'right',
+                                        display: 'flex',
+                                        flexDirection: 'column',
+                                        justifyContent: 'center',
+                                    }}
+                                    type="number"
+                                    id="mintAmount"
+                                    InputProps={{
+                                        inputProps: {
+                                            max: 10, min: 1
+                                        }
+                                    }}/>
                                 <br></br>
-                                <div style={{marginBottom: 40}}></div>
+                                <div style={{marginBottom: 80}}></div>
 
 
-                                <Typography variant="p" style={{float: 'left'}}>PRICE</Typography>
-                                <Typography variant="p" style={{float: 'right'}} id='input box'> 20 ETH </Typography>
+                                <Typography variant="p" style={{float: 'left'}}>PRICE: </Typography>
+                                <Typography variant="p" style={{float: 'right'}} id='input box'> 0.055 ETH </Typography>
                                 <div style={{marginBottom: 90}}></div>
                                 <br></br>
 
@@ -178,36 +194,26 @@ export default function Home() {
                                     width: '35%',
                                     backgroundColor: '#041157'
                                 }}><Typography variant='h5' id='mint'>MINT</Typography></Button>
-                                <br></br><br></br>
-                                <Button variant="contained" style={{
-                                    marginTop: 30,
-                                    width: '35%',
-                                    backgroundColor: '#041157'
-                                }}><Typography variant='h5' id='mintAndStake'>MINT & STAKE</Typography></Button>
-                            </Grid>
+                                <br></br>
+                            </div>
                         </Grid>
 
 
-                        <Grid item className={styles.stakeCards} xs={12} sm={12} md={12} lg={6}
+                        <Grid item xs={12} sm={12} md={12} lg={6}
                               style={{marginBottom: 100, alignItems: 'center'}}>
+                            <div style={{margin: 40}}
+                                 className={styles.stakeCards}>
 
-                            <Grid item xs={12} sm={12} md={12} lg={12} style={{marginBottom: 100}}>
                                 <Typography variant="h3" sx={{width: '100%', marginBottom: 10}}>PROGRESS</Typography>
 
                                 <Grid container xs={12} style={{marginBottom: 30}}>
-                                    <Grid item xs={3} className={styles.progressItems}><Typography variant='h6'>1,000/
-                                        0.111 ETH</Typography></Grid>
-                                    <Grid item xs={3} className={styles.progressItems}><Typography variant='h6'>4,000/
-                                        100,000 $FREE</Typography></Grid>
-                                    <Grid item xs={3} className={styles.progressItems}><Typography variant='h6'>4,000/
-                                        100,000 $FREE</Typography></Grid>
-                                    <Grid item xs={3} className={styles.progressItems}><Typography variant='h6'>4,000/
-                                        100,000 $FREE</Typography></Grid>
+                                    <Grid item xs={12} style={{textAlign: 'center'}}><Typography
+                                        style={{wordWrap: 'break-word'}} variant='h6' id='amountMinted'> - </Typography></Grid>
                                 </Grid>
 
 
                                 <Box sx={{width: '100%', marginBottom: 5}}>
-                                    <LinearProgress variant="determinate" id='progressBar' value='75'/>
+                                    <LinearProgress variant="determinate" id='progressBar' value='25'/>
                                 </Box>
 
                                 <Typography variant="h4"
@@ -216,16 +222,15 @@ export default function Home() {
                                 <Grid container xs={12} style={{marginBottom: 30}} spacing={5}>
                                     <Grid item xs={6}>
                                         <Typography variant="p" style={{float: 'left'}}>CRIMINALS MINTED: </Typography>
-                                        <Typography variant="p" style={{float: 'right'}} id='criminalsMinted'> - </Typography>
+                                        <Typography variant="p" style={{float: 'right'}}
+                                                    id='criminalsMinted'> - </Typography>
                                         <div style={{marginBottom: 40}}></div>
 
-                                        <Typography variant="p" style={{float: 'left'}}>CRIMINALS MINTED: </Typography>
-                                        <Typography variant="p" style={{float: 'right'}} id='guardsMinted'> - </Typography>
+                                        <Typography variant="p" style={{float: 'left'}}>GUARDS MINTED: </Typography>
+                                        <Typography variant="p" style={{float: 'right'}}
+                                                    id='guardsMinted'> - </Typography>
                                         <div style={{marginBottom: 90}}></div>
 
-
-                                        <Typography variant="p" style={{float: 'left'}}>CRIMINALS STOLEN: </Typography>
-                                        <Typography variant="p" style={{float: 'right'}} id='criminalsStolen'> 0/0</Typography>
                                         <div style={{marginBottom: 90}}></div>
 
                                     </Grid>
@@ -233,43 +238,48 @@ export default function Home() {
 
                                     <Grid item xs={6}>
                                         <Typography variant="p" style={{float: 'left'}}>CRIMINALS STAKED: </Typography>
-                                        <Typography variant="p" style={{float: 'right'}} id='criminalsStaked'> - </Typography>
+                                        <Typography variant="p" style={{float: 'right'}}
+                                                    id='criminalsStaked'> - </Typography>
                                         <div style={{marginBottom: 40}}></div>
 
-                                        <Typography variant="p" style={{float: 'left'}}>CRIMINALS STAKED: </Typography>
-                                        <Typography variant="p" style={{float: 'right'}} id='guardsStaked'> - </Typography>
+                                        <Typography variant="p" style={{float: 'left'}}>GUARDS STAKED: </Typography>
+                                        <Typography variant="p" style={{float: 'right'}}
+                                                    id='guardsStaked'> - </Typography>
                                         <div style={{marginBottom: 90}}></div>
 
 
                                         <Typography variant="p" style={{float: 'left'}}>$FREE CLAIMED: </Typography>
-                                        <Typography variant="p" style={{float: 'right'}} id='freeClaimed'> 0/0</Typography>
+                                        <Typography variant="p" style={{float: 'right'}}
+                                                    id='freeClaimed'> 0/0</Typography>
                                         <div style={{marginBottom: 90}}></div>
 
                                     </Grid>
                                 </Grid>
-                            </Grid>
+                            </div>
                         </Grid>
                     </Grid>
 
 
                     <Grid container maxWidth='90%' spacing={3}>
-                        <Grid item className={styles.stakeCards} xs={12} sm={12} md={12} lg={6}
+                        <Grid item xs={12} sm={12} md={12} lg={6}
                               style={{marginBottom: 100, alignItems: 'center'}}>
+                            <div style={{margin: 40}}
+                                 className={styles.stakeCards}>
 
-
-                            <Grid item xs={12} sm={12} md={12} lg={12} style={{marginBottom: 100}}>
 
                                 <Typography variant="h3" sx={{marginBottom: 5}}>UNSTAKED</Typography>
 
 
-                               <Typography variant="p" style={{float: 'left'}}>CRIMINALS (0)</Typography>
-                                <Typography variant="p" style={{float: 'right'}} id='criminalsStakedSum'> SELECT ALL </Typography>
+                                <Typography variant="p" style={{float: 'left'}}>CRIMINALS (0)</Typography>
+                                <Typography variant="p" style={{float: 'right'}} id='criminalsStakedSum'> SELECT
+                                    ALL </Typography>
                                 <div style={{marginBottom: 300}}></div>
 
                                 <Divider variant="middle" style={{marginBottom: 40}}/>
 
-                               <Typography variant="p" style={{float: 'left'}}>GUARDS (0)</Typography>
-                                <Typography variant="p" style={{float: 'right'}} id='criminalsStakedSum'> SELECT ALL </Typography>
+                                <Typography variant="p" style={{float: 'left'}}>GUARDS (0)</Typography>
+                                <Typography variant="p" style={{float: 'right'}} id='criminalsStakedSum'> SELECT
+                                    ALL </Typography>
                                 <div style={{marginBottom: 300}}></div>
 
                                 <Button variant="contained" style={{
@@ -277,27 +287,29 @@ export default function Home() {
                                     width: '35%',
                                     backgroundColor: '#041157'
                                 }}><Typography variant='h5' id='mint'>STAKE</Typography></Button>
-                            </Grid>
+                            </div>
                         </Grid>
 
 
-                                               <Grid item className={styles.stakeCards} xs={12} sm={12} md={12} lg={6}
+                        <Grid item xs={12} sm={12} md={12} lg={6}
                               style={{marginBottom: 100, alignItems: 'center'}}>
+                            <div style={{margin: 40}}
+                                 className={styles.stakeCards}>
 
-
-                            <Grid item xs={12} sm={12} md={12} lg={12} style={{marginBottom: 100}}>
 
                                 <Typography variant="h3" sx={{marginBottom: 5}}>STAKED</Typography>
 
 
-                               <Typography variant="p" style={{float: 'left'}}>CRIMINALS (0)</Typography>
-                                <Typography variant="p" style={{float: 'right'}} id='criminalsUnstakedSum'> SELECT ALL </Typography>
+                                <Typography variant="p" style={{float: 'left'}}>CRIMINALS (0)</Typography>
+                                <Typography variant="p" style={{float: 'right'}} id='criminalsUnstakedSum'> SELECT
+                                    ALL </Typography>
                                 <div style={{marginBottom: 300}}></div>
 
                                 <Divider variant="middle" style={{marginBottom: 40}}/>
 
-                               <Typography variant="p" style={{float: 'left'}}>GUARDS (0)</Typography>
-                                <Typography variant="p" style={{float: 'right'}} id='criminalsUnstakedSum'> SELECT ALL </Typography>
+                                <Typography variant="p" style={{float: 'left'}}>GUARDS (0)</Typography>
+                                <Typography variant="p" style={{float: 'right'}} id='criminalsUnstakedSum'> SELECT
+                                    ALL </Typography>
                                 <div style={{marginBottom: 300}}></div>
 
                                 <Button variant="contained" style={{
@@ -311,7 +323,7 @@ export default function Home() {
                                     width: '35%',
                                     backgroundColor: '#041157'
                                 }}><Typography variant='h5' id='mint'>CLAIM & UNSTAKE</Typography></Button>
-                            </Grid>
+                            </div>
                         </Grid>
                     </Grid>
 
@@ -324,10 +336,8 @@ export default function Home() {
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        Powered by{' '}
-                        <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16}/>
-          </span>
+                        Powered by the Man
+
                     </a>
                 </footer>
             </div>

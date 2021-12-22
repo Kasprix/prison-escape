@@ -94,11 +94,11 @@
 }
 
 .progressItems {
-     border: 1px solid #eaeaea;
+    border: 1px solid #eaeaea;
 }
 
 .multipleCard {
-        margin: 1rem;
+    margin: 1rem;
 
     padding: 1.5rem;
     text-align: center;
@@ -130,6 +130,15 @@
     height: 1em;
     margin-left: 0.5rem;
 }
+
+.tableData {
+    wordWrap: 'break-word';
+    padding: 1rem;
+    textAlign: center;
+    marginBottom: 30;
+    border: 1px solid #eaeaea;
+}
+
 
 @media (max-width: 600px) {
     .grid {
