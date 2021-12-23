@@ -207,7 +207,7 @@ export default function Home() {
 
                         <Grid item xs={12} sm={12} md={3}>
                             <div className={styles.multipleCard}
-                                 style={{backgroundColor: 'rgb(4, 17, 87, 0.7)'}}>
+                                 style={{backgroundColor: 'rgb(4, 17, 87, 0.7)', padding: 30}}>
                                 <Typography variant='h5'> GUARD<br></br><br></br></Typography>
 
                                 <Typography variant='h6'>Protectors of the prison. They only have one thought, Criminals
@@ -221,7 +221,7 @@ export default function Home() {
                         <Grid item
 
                               xs={12} sm={12} md={6}>
-                            <div className={styles.multipleCard}>
+                            <div className={styles.multipleCard} style={{padding: 30}}>
                                 <Typography variant='h5'>$FREE<br></br><br></br></Typography>
 
                                 <Typography variant='h6'>
@@ -239,7 +239,7 @@ export default function Home() {
 
                         <Grid item xs={12} sm={12} md={3}>
                             <div className={styles.multipleCard}
-                                 style={{backgroundColor: 'rgb(4, 17, 87, 0.7)'}}>
+                                 style={{backgroundColor: 'rgb(4, 17, 87, 0.7)', padding: 30}}>
                                 <Typography variant='h5'>CRIMINALS<br></br><br></br></Typography>
 
                                 <Typography variant='h6'>
@@ -276,7 +276,7 @@ export default function Home() {
 
                                 <Grid item
                                       xs={4} sm={4} md={4}>
-                                    <a href='https://vercel.com' target="_blank" rel="noreferrer"><img
+                                    <a href='https://twitter.com/ThePrisonEscape' target="_blank" rel="noreferrer"><img
                                         src="images/assets/twitter.png" style={{width: '50%'}}/></a>
                                 </Grid>
 
