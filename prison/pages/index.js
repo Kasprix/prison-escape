@@ -261,7 +261,7 @@ export default function Home() {
 
                         <Grid item className={styles.multipleCard} sx={{}} xs={12} sm={12} md={4}>
                             <Grid container maxWidth='100%' spacing={2}
-                                  style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+                                  style={{flex: 1, justifyContent: 'center', alignItems: 'center', padding: 15}}>
                                 <Grid item
                                       xs={4} sm={4} md={4}>
                                     <a href='https://vercel.com' target="_blank" rel="noreferrer"><img
